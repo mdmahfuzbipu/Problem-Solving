@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int cobaias;
+    int coelhos;
+    int ratos;
+    int sapos;
+
+    char type[3]={'C','R','S'};
+
+    printf("%c",type[0]);
+
+
+
+
+
+    return 0;
+}

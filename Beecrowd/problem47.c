@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+
+    int starth,startm,endh,endm,durationh,durationm;
+    scanf("%d%d%d%d",&starth,&startm,&endh,&endm);
+
+    if(starth<endh && startm<endm)
+    {
+        durationh=endh-starth;
+
+        durationm=endm-startm;
+
+        printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",durationh,durationm);
+    }
+
+    else if(starth==endh && startm==endm){
+
+    durationh=24+(endh-starth);
+    durationm=endm-startm;
+
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",durationh,durationm);
+
+    }
+
+ else if (starth < endh || (starth == endh && startm <= endm)) {
+    durationh = endh - starth;
+    if (startm > endm) {
+        durationh--;
+        durationm = 60 - (startm - endm);
+    } else {
+        durationm = endm - startm;
+    }
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", durationh, durationm);
+}
+
+
+    else {
+    durationh = endh - starth;
+    durationm = endm - startm;
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", durationh, durationm);
+}
+
+    return 0;
+}

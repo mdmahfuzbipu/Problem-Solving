@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    char class1[20];
+    scanf("%19s",class1);
+    char class2[20];
+    scanf("%19s",class2);
+    char class3[20];
+    scanf("%19s",class3);
+    
+    if()
+    
+    
+    return 0;
+}
