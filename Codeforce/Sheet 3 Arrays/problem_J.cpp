@@ -1,5 +1,5 @@
 #include <iostream>
-#include <limits.h>
+#include <limits>
 using namespace std;
 int main()
 {
@@ -7,30 +7,28 @@ int main()
     cin>>n;
 
     int A[n];
-    int min=INT_MAX;
+    int min_value=numeric_limits<int>::max();
+    int value_count=0;
+
     for(int i =0;i<n;i++)
     {
         cin>>A[i];
-    }
+    
 
-    for(int j=0;j<n;j++)
-    {
-        if(A[j]<min)
+        if(A[i]<min_value)
         {
-            min=A[j];
+            min_value=A[i];
+            value_count=1;
         }
-    }
-
-    int count=0;
-    for(int m=0;m<n;m++)
-    {
-        if(A[m]==min)
+        else if(A[i]==min_value)
         {
-            count++;
+            value_count++;
         }
+
     }
 
-    if(count%2 != 0)
+
+    if(value_count%2 != 0)
     {
         cout<<"Lucky"<<endl;
 
