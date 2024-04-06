@@ -15,9 +15,9 @@ vector<int> findMaxsub(vector<int>& nums)
 
         for(int j=i;j<size;j++)
         {
-            int maxSub=max(maxNum,nums.at(i));
+            maxNum=max(maxNum,nums.at(j));
 
-            result.push_back(maxSub);
+            result.push_back(maxNum);
         }
     }
 
@@ -37,7 +37,7 @@ int main()
     int n;
     cin>>n;
 
-    vector<int> numbers;
+    vector<int> numbers(n);
 
     for(int i =0;i<n;i++)
     {
@@ -46,7 +46,7 @@ int main()
 
     vector<int> result= findMaxsub(numbers);
 
-    for(int k=0;k<n;k++)
+    for(int k=0;k<result.size();k++)
     {
         cout<<result.at(k)<<" ";
     }
