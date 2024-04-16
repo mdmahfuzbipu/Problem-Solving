@@ -1,21 +1,25 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
+
 int main()
 {
-    int n, m;
-    cin >> n >> m;
-    vector<int> numbers(n);
+    int N, M;
+    cin >> N >> M;
 
-    for (int i = 0; i < n; i++)
+    vector<int> occurrences(M, 0);
+
+    for (int i = 0; i < N; i++)
     {
-        cin >> numbers[i];
+        int num;
+        cin >> num;
+        occurrences[num - 1]++;
     }
 
-    for (int num=0;num<m;num++)
+    for (int i = 0; i < M; i++)
     {
-        int times = count(numbers.begin(),numbers.end(), numbers[num]);
-        cout << times << endl;
+        cout << occurrences[i] << endl;
     }
+
+    return 0;
 }
