@@ -23,7 +23,7 @@ int main()
             A2[i]=A[i]+A2[i-1];
         }
 
-        
+        //Another accepted way
 
         /*
             cin>>A[i];
