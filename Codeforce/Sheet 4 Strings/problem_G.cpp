@@ -8,7 +8,7 @@ int main()
     getline(cin,S);
     
     int i=0;
-    while (S[i] != '/0')
+    while (S[i] != '\0')
     {
         if(S[i] == ',')
         {
