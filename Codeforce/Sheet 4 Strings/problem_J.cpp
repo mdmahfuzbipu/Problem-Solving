@@ -18,5 +18,12 @@ int main()
     {
         cout<<i->first<<" : "<<i->second<<endl;
     }
-
+/*
+    second way
+    
+    for(const auto& pair: charCount)
+    {
+        cout<<pair.first<<" : "<<pair.second<<endl;
+    }
+*/
 }
