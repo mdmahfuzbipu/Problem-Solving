@@ -1,35 +1,61 @@
 #include <iostream>
-#include <string>
 
-void printCheckerboard(int n) {
-    int size = 1 << n;
+using namespace std;
 
-    for (int row = 0; row < size; row++) {
-        for (int col = 0; col < size; col++) {
-            if ((row + col) % 2 == 0) {
-                std::cout << "#";
-            } else {
-                std::cout << ".";
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n;
+        cin>>n;
+
+        string s;
+
+        for(int i=1; i<=n; i+=1) // for i= 1 ##
+        {                        // for i=2 ##..
+            if(i%2 == 1)
+            {
+                s+= "##";
+            }
+
+            else
+            {
+                s+="..";
+            }
+        } //so for n=2 S will be ##..
+          // for n=3 S will be ##..##
+
+        string t;
+        for(int i =1 ;i <= n; i++)
+        {
+            if(i%2 == 1)
+            {
+                t+= "..";
+            }
+            else 
+            {
+                t+= "##";
+            }
+        }   // similiar t will be ..##
+        // for  n=3 t will be  ..##..
+
+
+        for(int i= 1;i <=n; i++)
+        {
+            if(i%2 == 1)
+            {
+                cout<< s <<"\n"<<s<<"\n";
+            }
+
+            else
+            {
+                cout<<t<<"\n"<<t<<"\n";
             }
         }
-        std::cout << std::endl;
+        
+
+
     }
-}
-
-int main() {
-    int t;
-    std::cin >> t;
-
-    for (int i = 0; i < t; i++) {
-        int n;
-        std::cin >> n;
-
-        printCheckerboard(n);
-
-        if (i < t - 1) {
-            std::cout << std::endl;
-        }
-    }
-
-    return 0;
 }
