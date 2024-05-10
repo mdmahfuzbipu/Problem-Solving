@@ -27,7 +27,7 @@ void solve()
         {
             target=1;
         }
-        }
+    }
         int res=count - target;
         
         cout<<res<<endl;
