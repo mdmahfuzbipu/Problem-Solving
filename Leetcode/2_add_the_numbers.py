@@ -24,3 +24,4 @@ class Solution:
             current = current.next
 
         return dummy_head.next
+16
