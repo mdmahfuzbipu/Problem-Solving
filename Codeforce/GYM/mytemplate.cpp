@@ -20,7 +20,7 @@ using namespace std;
 const ll MOD = 1e9 + 7;   // Use for modulo operations if needed
 const ll INF = LLONG_MAX; // Use for initializing maximum values
 
-void solution()
+void solve()
 {
     ll n;
     cin >> n;
@@ -60,7 +60,7 @@ int main()
 
     while (test--)
     {
-        solution();
+        solve();
     }
 
     return 0;
