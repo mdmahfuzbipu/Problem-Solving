@@ -5,21 +5,31 @@ using namespace std;
 
 void solve()
 {
-    ll n;
+    ll len;
     string word;
-    cin >> n >> word;
+    cin >> len >> word;
 
-    vector<ll> answer;
+    vector<char> decoded;
 
-
-    for(char c: word)
+    ll start = 0;
+    while(len > 0)
     {
-        ll mediun = answer.size() / 2;
+        if(len % 2 == 1)
+        {
+            decoded.push_back(word[start]);
+        }
 
-        answer.insert(answer.begin() + mediun, c);
+        else decoded.insert(decoded.begin(), word[start]);
+
+        start++;
+        len--;
     }
 
-    cout << string(answer.begin(), answer.end()) << endl;
+
+
+    for(char c: decoded) cout<<c;
+
+   
 }
 
 int main()
