@@ -19,7 +19,7 @@ void solve()
 
     for (ll i = 1; i <= n;i++)
     {
-        if(prefixsum[i] - nums[i] )
+        if(prefixsum[i] - nums[i] );
     }
 
     cout << cnt << "\n";
